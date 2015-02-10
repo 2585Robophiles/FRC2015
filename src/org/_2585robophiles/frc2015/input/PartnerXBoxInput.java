@@ -10,10 +10,12 @@ public class PartnerXBoxInput implements InputMethod{
   
   public PartnerXBoxInput(){
     controller = new Joystick(0);
+    controller2 = new Joystick(1);
   }
   
-  public XBoxInput(Joystick joystick){
+  public XBoxInput(Joystick joystick, joystick2){
     controller = joystick;
+    controller2 = joystick2;
   }
   
   @Override
