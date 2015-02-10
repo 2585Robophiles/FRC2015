@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.Joystick;
 
 public class PartnerXBoxInput implements InputMethod{
   private Joystick controller;
+  private Joystick controller2;
   
   public PartnerXBoxInput(){
     controller = new Joystick(0);
@@ -25,6 +26,6 @@ public class PartnerXBoxInput implements InputMethod{
   }
   
   public Joystick[] joysticks(){
-    return new Joystick[]{controller};
+    return new Joystick[]{controller, controller2};
   }
 }
