@@ -277,12 +277,12 @@ public class WheelSystem implements RobotSystem, Runnable {
 	public void run() {
 		currentRampForward += (input.forwardMovement()-currentRampForward) * RobotMap.FORWARD_RAMPING;
 		currentRampSideways += (input.sidewaysMovement()-currentRampSideways) * RobotMap.SIDEWAYS_RAMPING;
-		if(currentRampForward < .15 && currentRampForward > -.15)
+		if(currentRampForward < 0.13 && currentRampForward > -0.13)
 			currentRampForward = 0.0;
-		if(currentRampSideways < .175 && currentRampSideways > -.175)
+		if(currentRampSideways < 0.15 && currentRampSideways > -0.15)
 			currentRampSideways = 0.0;
 		rotationValue = input.rotation();
-		if(rotationValue < .15 && rotationValue > -.15)
+		if(rotationValue < 0.15 && rotationValue > -0.15)
 			rotationValue = 0.0;
 		else
 			rotationValue = Math.signum(input.rotation()) * Math.pow(Math.abs(input.rotation()), secondarySensitivity ? RobotMap.SECONDARY_ROTATION_EXPONENT : RobotMap.ROTATION_EXPONENT);
