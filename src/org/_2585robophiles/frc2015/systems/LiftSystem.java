@@ -171,10 +171,10 @@ public class LiftSystem implements RobotSystem, Runnable {
 			setMotors(input.analogLiftUp());
 		}else if(input.digitalLiftUp()){
 			disablePID();
-			setMotors(1);
+			setMotors(0.5);
 		}else if(input.digitalLiftDown()){
 			disablePID();
-			setMotors(-1);
+			setMotors(-0.5);
 		}else{
 			if(disabledPID){
 				setMotors(0);
